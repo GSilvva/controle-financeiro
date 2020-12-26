@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css" type="text/css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Sistema de Controle Financeiro</h1>
+    
+    <div class="atual">
+        <p>SALDO ATUAL</p>
+        <h2>R$ <span class="saldo-atual">0,00</span></h2>
+    </div>
+
+    <div class="receitasXdespesas">
+        <div class="sec verde">
+            <p>RECEITAS</p>
+            <h3>R$ <span class="value-receita">0,00</span></h3>
+        </div>
+        <hr>
+        <div class="sec vermelho">
+            <p>DESPESAS</p>
+            <h3>R$ <span class="value-despesa">0,00</span></h3>
+        </div>
+    </div>
+
+    <div class="transacoes">
+        <h3 class="title">Transações</h3>
+
+        <ul class="lista-transacoes"></ul>
+    </div>
+
+    <div class="adicionar">
+        <h3 class="title">Adicionar transação</h3>
+
+        <form id="form">
+            <div class="campo">
+                <label class="label">Nome</label>
+                <input type="text" name="nome" placeholder="Nome da transação">
+            </div>
+    
+            <div class="campo">
+                <p class="label">Tipo de transação</p>
+    
+                <div class="radios">
+                    <label class="radiobtn check-receita" for="receita">
+                        <input type="radio" id="receita" value="receita" name="radio" checked>
+                        Receita
+                    </label>
+                    <label class="radiobtn check-despesa" for="despesa">
+                        <input type="radio" id="despesa" value="despesa" name="radio">
+                        Despesa
+                    </label>
+                </div>
+    
+                <input type="text" name="valorDigitado" placeholder="Valor">
+            </div>
+
+            <button class="btn">Adicionar</button>
+        </form>
+    </div>
+</div>
+
+<script src="./script.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color:#3d3d3d;
+    list-style: none;
+
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: -1px;
+}
+
+body {
+    padding: 80px 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 460px;
+
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 48px 0;
+
+    text-align: center;
+}
+
+.atual { text-align: center; }
+.atual p { margin: 0 0 6px 0; }
+.atual h2 {
+    font-size: 3rem;
+    color: #4b7bec;
+}
+.atual h2 .saldo-atual { color: #4b7bec; }
+
+.receitasXdespesas {
+    margin: 24px 0 40px 0;
+    padding: 24px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+}
+.receitasXdespesas .sec { text-align: center; }
+.receitasXdespesas .sec p { margin: 0 0 6px 0; }
+.receitasXdespesas .sec h3 { font-size: 2rem; }
+.receitasXdespesas .sec.verde h3,
+.receitasXdespesas .sec.verde span { color: #2ecc71; }
+.receitasXdespesas .sec.vermelho h3,
+.receitasXdespesas .sec.vermelho span { color: #e74c3c; }
+.receitasXdespesas hr {
+    height: 56px;
+
+    border: none;
+    border-left: 1px solid #bdbdbd;
+}
+
+.title {
+    padding: 14px 0;
+    margin: 0 0 24px 0;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.transacoes { margin: 0 0 32px 0; }
+.transacoes .lista-transacoes li {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    padding: 16px;
+}
+.transacoes .lista-transacoes li.receita { border-right: 8px solid #2ecc71; }
+.transacoes .lista-transacoes li.receita .valor { color: #2ecc71; }
+.transacoes .lista-transacoes li.despesa { border-right: 8px solid #e74c3c; }
+.transacoes .lista-transacoes li.despesa .valor { color: #e74c3c; }
+.transacoes .lista-transacoes li:not(:last-child) { margin: 0 0 16px 0; }
+
+.transacoes .lista-transacoes li .nome,
+.transacoes .lista-transacoes li .valor { font-size: 18px; }
+.transacoes .lista-transacoes li .nome {
+    width: 40%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.transacoes .lista-transacoes li .valor {
+    font-weight: 500;
+
+    margin: 0 0 0 16px;
+}
+
+.transacoes .lista-transacoes li .delete-btn {
+    padding: 4px 9px;
+
+    font-size: 16px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+
+    background: #e74c3c;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+}
+
+.label {
+    margin: 0 0 12px 0;
+
+    display: block;
+    font-size: 18px;
+}
+
+.campo { margin: 0 0 32px 0; }
+.campo .label { color: #bdbdbd; }
+
+input[type="text"] {
+    padding: 0 0 12px 0;
+    
+    font-size: 18px;
+    font-weight: 500;
+
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #bdbdbd;
+    transition: 300ms;
+}
+input[type="text"]:focus { border-bottom: 2px solid #202020; }
+
+.radios {
+    margin: 0 0 16px 0;
+
+    display: flex;
+    align-items: center;
+}
+.radios label.radiobtn {
+    margin: 0 16px 0 0;
+    padding: 12px;
+
+    position: relative;
+    width: 128px;
+
+    border-radius: 6px;
+    transition: 300ms;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radios label.radiobtn input { margin: 0 12px 0 0; }
+
+.radios .radiobtn.check-despesa { border: 1px solid #e74c3c; color: #e74c3c; }
+.radios .radiobtn.check-receita { border: 1px solid #2ecc71; color: #2ecc71; }
+.radios .radiobtn.check-despesa:hover { background: rgba(231, 76, 60, .3); }
+.radios .radiobtn.check-receita:hover { background: rgba(46, 204, 113, .3); }
+
+.btn {
+    padding: 18px 64px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    background: #2bcbba;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    transition: 300ms;
+}
+.btn:hover { transform: scale(1.1); }
